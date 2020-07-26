@@ -1,0 +1,24 @@
+= City Connection Status Spring Boot Application image:https://ci.spring.io/api/v1/teams/spring-boot/pipelines/spring-boot-2.4.x/jobs/build/badge["Build Status", link="https://ci.spring.io/teams/spring-boot/pipelines/spring-boot-2.4.x?groups=Build"] image:https://badges.gitter.im/Join Chat.svg["Chat",link="https://gitter.im/spring-projects/spring-boot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
+:docs: http://localhost:8080/swagger-ui.html
+:github: https://github.com/spring-projects/spring-boot
+
+City Connection Status Application will determine if two cities are connected. Two cities are considered connected
+if there’s a series of roads that can be traveled from one city to another.
+
+
+You can use Spring Boot to create Java Rest Service applications that can be started using
+`java -jar`.
+
+Our primary goals are:
+
+* Load the City Connections from the city.txt. If the file is not present then you get Internal Server Error.
+The loader implementation can be changed without impacting the service layer.
+* Validate whether the connection exist between the cities(bi-directional).
+* Returns Yes if the cites are connected or returns No.
+* When from city  or to city parameter is not provided then service will return No.
+* Apis are documented using Swagger.
+
+Getting Started:
+
+* New Cities can be added into city.txt file with comma separated. Ex:  Boston, New York
+
